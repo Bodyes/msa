@@ -36,11 +36,17 @@ export default function Navbar(props: Properties) {
               )}
             </IconButton>
 
-            <Link component={RouterLink} to="/">
-              Main Page
+            <Link component={RouterLink} to="/table">
+              Table Page
             </Link>
             <Link component={RouterLink} to="/about">
               About
+            </Link>
+            <Link component={RouterLink} to="/msabrowser">
+              MSA
+            </Link>
+            <Link component={RouterLink} to="/">
+              Main Page
             </Link>
           </Box>
         </Toolbar>

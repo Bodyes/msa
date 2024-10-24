@@ -2,8 +2,10 @@ import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import MSABrowser from "./pages/MSABrowser";
-import About from "./pages/About";
+import TablePage from "./pages/TablePage";
+import AboutPage from "./pages/AboutPage";
+import MSABrowserPage from "./pages/MSABrowserPage";
+import MainPage from "./pages/MainPage";
 import App from "./App";
 
 const router = createBrowserRouter([
@@ -13,11 +15,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <MSABrowser />,
+        element: <MainPage />,
+      },
+      {
+        path: "/table",
+        element: <TablePage />,
       },
       {
         path: "/about",
-        element: <About />,
+        element: <AboutPage />,
+      },
+      {
+        path: "/msabrowser",
+        element: <MSABrowserPage />,
       },
     ],
   },

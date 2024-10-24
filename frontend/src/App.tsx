@@ -4,17 +4,27 @@ import Navbar from "./components/Navbar";
 import { useMemo, useState } from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { Box } from "@mui/system";
-import MSABrowser from "./pages/MSABrowser";
-import About from "./pages/About";
+import TablePage from "./pages/TablePage";
+import AboutPage from "./pages/AboutPage";
+import MSABrowserPage from "./pages/MSABrowserPage";
+import MainPage from "./pages/MainPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MSABrowser />,
+    element: <MainPage />,
+  },
+  {
+    path: "/table",
+    element: <TablePage />,
   },
   {
     path: "/about",
-    element: <About />,
+    element: <AboutPage />,
+  },
+  {
+    path: "/msabrowser",
+    element: <MSABrowserPage />,
   },
 ]);
 
